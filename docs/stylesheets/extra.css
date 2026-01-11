@@ -1,0 +1,93 @@
+/* Eigen OS – quantum field palette (Material for MkDocs) */
+:root {
+  --eigen-ink: #06080c;
+  --eigen-slate: #0b0f14;
+  --eigen-smoke: #8a93a6;
+  --eigen-text: #f6f8ff;
+  --eigen-cyan: #2de2e6;
+  --eigen-violet: #9b5cff;
+
+  /* Material variables (override branding) */
+  --md-primary-fg-color: var(--eigen-cyan);
+  --md-accent-fg-color: var(--eigen-violet);
+  --md-default-bg-color: var(--eigen-ink);
+}
+
+[data-md-color-scheme="slate"] {
+  --md-hue: 210;
+}
+
+/* Subtle “field dots” background */
+[data-md-color-scheme="slate"] .md-main {
+  background-image:
+    radial-gradient(circle at 20px 20px, rgba(255,255,255,0.035) 1px, rgba(0,0,0,0) 1px);
+  background-size: 28px 28px;
+}
+
+/* Hero section on Home */
+.eigen-hero {
+  position: relative;
+  overflow: hidden;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.10);
+  background:
+    radial-gradient(900px 500px at 30% 20%, rgba(45, 226, 230, 0.18), rgba(0,0,0,0)),
+    radial-gradient(700px 450px at 65% 35%, rgba(155, 92, 255, 0.16), rgba(0,0,0,0)),
+    linear-gradient(180deg, rgba(6,8,12,1) 0%, rgba(11,15,20,1) 60%, rgba(6,8,12,1) 100%);
+  padding: 1.25rem 1.25rem 1.4rem;
+}
+
+.eigen-brand {
+  display: flex;
+  gap: .8rem;
+  align-items: center;
+  margin-bottom: .9rem;
+}
+
+.eigen-brand img {
+  width: 44px;
+  height: 44px;
+  filter: drop-shadow(0 14px 45px rgba(45, 226, 230, 0.14));
+}
+
+.eigen-wordmark {
+  display: flex;
+  gap: .35rem;
+  align-items: baseline;
+  letter-spacing: -0.02em;
+}
+
+.eigen-wordmark .eigen { font-weight: 800; font-size: 1.35rem; color: var(--eigen-text); }
+.eigen-wordmark .os { font-weight: 800; font-size: 1.15rem; color: var(--eigen-cyan); }
+
+.eigen-hero h1 {
+  margin-top: .2rem;
+  margin-bottom: .5rem;
+  line-height: 1.08;
+}
+
+.eigen-hero p {
+  color: rgba(246,248,255,0.78);
+  margin-top: .4rem;
+  margin-bottom: 1rem;
+}
+
+.eigen-cta a.md-button--primary {
+  background: linear-gradient(90deg, var(--eigen-cyan), var(--eigen-violet));
+  border: 0;
+  color: #06080c;
+}
+
+.eigen-heroart {
+  margin-top: 1rem;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.10);
+  box-shadow: 0 28px 90px rgba(0,0,0,0.55);
+}
+
+/* Make admonitions blend into the palette */
+[data-md-color-scheme="slate"] .md-typeset .admonition,
+[data-md-color-scheme="slate"] .md-typeset details {
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.04);
+}

@@ -1,0 +1,66 @@
+site_name: Eigen OS
+site_description: Contract-first runtime & orchestration for hybrid quantum workflows
+site_url: https://www.eigen-os.org
+
+repo_url: https://github.com/Eigen-OS/eigen-os
+repo_name: Eigen-OS/eigen-os
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  language: en
+  logo: assets/logo-mark.svg
+  favicon: assets/favicon.ico
+  features:
+    - navigation.instant
+    - navigation.tabs
+    - navigation.top
+    - content.code.copy
+    - toc.follow
+  palette:
+    - scheme: slate
+      primary: blue grey
+      accent: cyan
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+    - scheme: default
+      primary: blue grey
+      accent: cyan
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+
+extra_css:
+  - stylesheets/extra.css
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+
+nav:
+  - Home: index.md
+  - Docs:
+      - Introduction: intro.md
+      - Architecture: architecture.md
+      - Roadmap: roadmap.md
+      - Community: community.md
+      - Security: security.md
+  - Help: help.md
